@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <main>
+        <form id="registerform" th:action="@{/process_register}" th:object="${user}" method="POST" role="form" >
+            <h1>Register</h1>
+            <input type="text" th:field="*{nombre}" placeholder="Username">
+            <br>
+            <input type="password" th:field="*{contraseña}" placeholder="Password">
+            <hr>
+            <button type="submit">Continue</button>
+        </form>
+    </main>
+</body>
+</html>

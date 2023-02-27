@@ -1,0 +1,123 @@
+
+#accountButton{
+    margin-right:10px; font-size: 30px; margin-top:10px; padding: 8px; background-color: #e4d9bf; color: #252525; border-radius: 50%;
+    font-size: 20px;  padding: 10px; margin: 10px; border-radius:10px;
+}
+#accountButton:hover{
+    background-color: #fa5353;
+    color: #e4d9bf;
+}
+
+.subBody{
+    width: fit-content; margin: auto; background-color: #151515; color: #e4d9bf; transition: 0.3s;
+}
+.divUserCard{
+    width: 1500px; margin: 10px; position: relative;
+}
+.divBanner{
+ width: 1500px; height: 300px; position: relative;
+}
+.userImage{
+    border-radius: 50%; position: absolute; bottom: -100px; left: 100px; width:200px;
+}
+.followers{
+    display: flex;
+    margin: 10px;
+}
+.following{
+  display: flex;
+    margin: 10px; margin-left: 0;
+}
+.settingsUserDiv{
+    position: absolute; right: 0; margin-right: 50px;
+}
+.userDivFull{
+    position: relative; margin-left: 100px; margin-right: 100px;
+}
+.userDiv{
+    margin-top: 100px; padding-left: 20px; margin-bottom: 60px; position: relative;
+}
+.userName{
+    font-size: xx-large; margin-top: 8px;
+}
+.userInfo{
+    position: absolute; right: 0;
+}
+.userInfo2{
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.descripcion{
+    width: 1000px;
+}
+
+.element{
+    padding-bottom: 20px;
+}
+.subElement{
+    padding: 10px; background-color: #252525;
+}
+
+@media only screen and (max-width: 1800px) {
+  .divUserCard{
+    width: 1000px;
+  }
+  .divBanner{
+    width: 1000px;
+  }
+  .descripcion{
+    width: 500px;
+  }
+  
+}
+@media only screen and (max-width: 1350px) {
+  .divUserCard{
+    width: 600px;
+  }
+  .divBanner{
+    width: 600px;
+  }
+  .descripcion{
+    width: 400px;
+  }
+  .userInfo{
+    display: none;
+  }
+  .userInfo2{
+    display: block;
+  }
+  .settingsUserDiv{
+    margin-right: 20px;
+  }
+
+  .divSelfCard {
+    width: 350px;
+  }
+  .divModelCard{
+    margin: 0; width: 350px;
+  }
+  .model{
+    width:350px; height: 300px;
+  }
+  .divImgModel{
+    margin: auto;
+  }
+  .bigImage{
+    display: none;
+  }
+  .smallImage{
+    display: block;
+  }
+  .following, .followers{
+    font-size: 25px;
+  }
+
+  .userInfo2{
+    font-size: 30px;
+  }
+  
+  .descripcion{
+    font-size: 25px;
+  }
+}

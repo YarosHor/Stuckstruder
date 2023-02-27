@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Title of the document</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="scripts/model3d.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script>
+        var $scanlines = $('.scanlines');
+            $scanlines
+                .children().hide()
+                .first().show();
+            
+            // toggle scanlines
+            $('#togglescanlines').on('click', function(e) {
+              e.preventDefault();
+              $scanlines.toggleClass('scanlines');
+            });
+            
+            // switch between demos
+            $('.sample-ctrl a').on('click', function(e) {
+               e.preventDefault();
+               $scanlines
+                   .children().hide()
+                   .filter('#'+ $(this).attr('data-ctrl')).show();
+            });
+            </script>
+            <style></style>
+    </head>
+    <body style="background-color: #252525;" >
+        <header style="background-color: #151515; display: flex; position: sticky; top: 0; width:inherit; z-index: 10;" >
+            <div><img src="images/stuckstruder.png" style="width: fit-content; width: 25vh;"/></div>
+            <!--style="top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);"-->
+            <div style="margin-top: 30px;">
+                <ul style="display: flex; text-transform: uppercase; color: #414141; ">
+                    <li><a href="">home</a></li>
+                    <li><a href="">questions</a></li>
+                    <li><a href="">models</a></li>
+                    <li><a href="">groups</a></li>
+                    <li><a href="">users</a></li>
+                    <li><a href="">colections</a></li>
+                </ul>
+            </div>
+            <div style="background-color: #e4d9bf; display: flex; height: fit-content; float: right; margin-left: auto; margin-right: 30px; margin-top: 30px;">
+                <div id="user" style="display: flex;">
+                    <div style="margin-right: 10px; margin-left: 10px; font-size: 25px;">Usuario</div>
+                    <img src="images/img_avatar.png" height="50px">
+                </div>
+            </div>
+        </header>
+        <div style="display: flex; width:2000px; font-family:'Eight Bit Dragon'">
+            <div class="w3-sidebar w3-bar-block" style="width:25vh; background-color: #151515; color: #e4d9bf;">
+                <p class="w3-bar-item" style="font-size:x-large;">Menu</p>
+                <a href="#" class="w3-bar-item w3-button">Recently visited</a>
+                <a href="#" class="w3-bar-item w3-button">Your Groups</a>
+                <a href="#" class="w3-bar-item w3-button">Your Friends</a>
+                <a href="#" class="w3-bar-item w3-button">Liked</a>
+                <a href="#" class="w3-bar-item w3-button">(utilizar z-index)</a>
+                <a href="#" class="w3-bar-item w3-button">Saved Models</a>
+            </div>
+
+            <!--Body-->
+            <div style="margin-left: 25vh;">
+                <!--<div style="background-color: blueviolet; width: 200vh;">
+                    <ul style="display: flex; text-transform: uppercase; color: aqua; margin: 0;">
+                        <li><a href="">home</a></li>
+                        <li><a href="">questions</a></li>
+                        <li><a href="">models</a></li>
+                        <li><a href="">groups</a></li>
+                        <li><a href="">users</a></li>
+                        <li><a href="">colections</a></li>
+                    </ul>
+                    
+            </div>-->
+                <div class="card" style="margin: 25px;  width: fit-content;">
+                    <div style="margin: 10px; width: max-content;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="text textTitle">I have a problem with this design</div>
+                            <a class="fa fa-ellipsis-h" style="margin-top:10px; margin-right:10px; font-size: 30px;"></a>
+                        </div>
+                        <div  style="display: flex;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="width: 500px; margin-right: 10px; position:static;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                </div>
+                                <div style="display: flex;  bottom: 0; margin-top: auto; padding-top: 20px;">
+                                    <a class="fa fa-bookmark" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-share" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-heart" style="margin-right:5px; font-size: 30px;"></a>
+                                </div>
+                            </div>
+                            <div style="width:200px; height: 200px; align-self: end;">
+                                <model-viewer style="width:200px; height: 200px;" alt="" src="/models/sci-fi_trash.glb" ar  poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y" generate-schema></model-viewer>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="display: flex;">Creado el: <div class="numbers">26/01/2023</div></div>
+                            <div>Creado por: Jesus12</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin: 25px;  width: fit-content;">
+                    <div style="margin: 10px; width: max-content;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="text textTitle">I have a problem with this design</div>
+                            <a class="fa fa-ellipsis-h" style="margin-top:10px; margin-right:10px; font-size: 30px;"></a>
+                        </div>
+                        <div  style="display: flex;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="width: 500px; margin-right: 10px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                </div>
+                                <div style="display: flex;  bottom: 0; margin-top: auto; padding-top: 20px;">
+                                    <a class="fa fa-bookmark" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-share" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-heart" style="margin-right:5px; font-size: 30px;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="display: flex;">Creado el: <div class="numbers">26/01/2023</div></div>
+                            <div>Creado por: Jesus12</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin: 25px;  width: fit-content;">
+                    <div style="margin: 10px; width: max-content;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="text textTitle">I have a problem with this design</div>
+                            <a class="fa fa-ellipsis-h" style="margin-top:10px; margin-right:10px; font-size: 30px;"></a>
+                        </div>
+                        <div  style="display: flex;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="width: 500px; margin-right: 10px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                </div>
+                                <div style="display: flex;  bottom: 0; margin-top: auto; padding-top: 20px;">
+                                    <a class="fa fa-bookmark" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-share" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-heart" style="margin-right:5px; font-size: 30px;"></a>
+                                </div>
+                            </div>
+                            <div style="width:200px; height: 200px; align-self: end;">
+                                <model-viewer style="width:200px; height: 200px;" alt="" src="/models/panda.glb" ar  poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y" generate-schema></model-viewer>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="display: flex;">Creado el: <div class="numbers">26/01/2023</div></div>
+                            <div>Creado por: Jesus12</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin: 25px;  width: fit-content;">
+                    <div style="margin: 10px; width: max-content;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="text textTitle">I have a problem with this design</div>
+                            <a class="fa fa-ellipsis-h" style="margin-top:10px; margin-right:10px; font-size: 30px;"></a>
+                        </div>
+                        <div  style="display: flex;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="width: 500px; margin-right: 10px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                </div>
+                                <div style="display: flex;  bottom: 0; margin-top: auto; padding-top: 20px;">
+                                    <a class="fa fa-bookmark" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-share" style="margin-right:10px; font-size: 30px;"></a>
+                                    <a class="fa fa-heart" style="margin-right:5px; font-size: 30px;"></a>
+                                </div>
+                            </div>
+                            <div style="width:200px; height: 200px; align-self: end;">
+                                <model-viewer style="width:200px; height: 200px;" alt="" src="/models/cute_girl.glb" ar  poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y" generate-schema></model-viewer>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="display: flex;">Creado el: <div class="numbers">26/01/2023</div></div>
+                            <div>Creado por: Jesus12</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<iframe id="view360Iframe" width="100%" scrolling="0" src="https://sketchfab.com/models/8d913bda48f84217902e6829982c494f/embed?ui_infos=0&amp;ui_watermark=0&amp;ui_help=0&amp;ui_settings=0&amp;ui_inspector=0&amp;ui_annotations=0&amp;ui_stop=0&amp;ui_vr=0&amp;preload=1&amp;autostart=1&amp;ui_hint=2&amp;autospin=0.2">
+                </iframe>-->
+            </div>
+        </div>
+    </body>
+</html>

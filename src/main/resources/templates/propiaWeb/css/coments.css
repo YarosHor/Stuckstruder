@@ -1,0 +1,37 @@
+form{
+    padding-bottom: 20px;
+}
+textarea{
+    height:200px
+}
+#sidebarUser{
+    padding: 10px;
+}
+.divSelfCard{
+    padding-bottom: 10px;
+}
+.questionSelfCard {
+    width: fit-content;
+      margin: auto;
+      background-color: #151515;
+      color: #e4d9bf;
+      transition: 0.3s;
+      border-color: #252525;
+      border-left: 10px;
+    }
+.beforeComment{
+    background-color: #252525; padding: 10px;
+}
+.comment{
+    background-color: #151515; margin: 40px; margin-top: 10px; margin-bottom: 10px;
+}
+.textComment{
+    margin: 10px; margin-left: 30px;
+}
+.modelButton{
+    position: absolute; right: 0; background-color: #e4d9bf; color: #252525; height: fit-content; margin-right: 40px; padding: 10px; padding-left: 30px; padding-right: 30px; border-radius:10px; font-size: 15px;  font-weight: bold; white-space: nowrap;
+  }
+  .modelButton:hover{
+    background-color: #fa5353;
+    color: #e4d9bf;
+  }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Title of the document</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Esto es del bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--Toolbar lateral-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Iconos-->
+        <script src="scripts/model3d.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <!--CSS Propios-->
+        <link rel="stylesheet" href="propiaWeb/css/layout.css">
+        <link rel="stylesheet" href="propiaWeb/css/index.css">
+        <link rel="stylesheet" href="propiaWeb/css/model.css">
+        <link rel="stylesheet" href="propiaWeb/css/account.css">
+        
+        <!--<link rel="stylesheet" href="crt1.css">-->
+
+    </head>
+    <body style="background-color: #252525;"><!--Etiqueta crt  class="crt"-->
+        <!--Esto es del bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <header>
+            <div><img class="logo" src="/images/stuckstruder.png" /></div>
+            <div class="headDiv" >
+                <ul class="largeMenu">
+                    <li><a href="/pages/home.html">home</a></li>
+                    <li><a href="/pages/following.html">following</a></li>
+                    <li><a href="/pages/questions.html">questions</a></li>
+                    <li><a href="/pages/models.html">models</a></li>
+                    <li><a href="/pages/liked.html">liked</a></li>
+                    <li><a href="/pages/saved.html">saved</a></li>
+                </ul>
+                <div class="smallMenu">
+                    <button class="fa fa-bars icon smallButton" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>Account</span>
+                    </button>
+                    <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton1">
+                        <li><a href="/pages/home.html">home</a></li>
+                        <li><a href="/pages/following.html">following</a></li>
+                        <li><a href="/pages/questions.html">questions</a></li>
+                        <li><a href="/pages/models.html">models</a></li>
+                        <li><a href="/pages/liked.html">liked</a></li>
+                        <li><a href="/pages/saved.html">saved</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bigUser">
+            <div class="divIcons">
+                <button class="fa fa-plus icon plusButton" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton2">
+                    <li><a id="createNew" class="dropdown-item" href="/pages/subPages/newQuestion.html">New Question</a></li>
+                    <li><a id="createNew" class="dropdown-item" href="/pages/subPages/newModel.html">New Model</a></li>
+                </ul>
+            </div>
+            <a class="signOut" href="#">Log Out</a>
+            <a class="divUser" href="/pages/account.html">
+                <div class="user">
+                    <div class="divUserName">Usuario</div>
+                    <div class="divUserImg">
+                        <img src="/images/img_avatar.png" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+            </a>
+        </div>
+        </header>
+
+        <div class="beforeSideBar">
+            <div class="w3-sidebar w3-bar-block  sidebar firstSidebar">
+                <div class="smallUser">
+                    <a class="w3-bar-item w3-button sidebarTitle" href="/pages/account.html">
+                        <img src="/images/img_avatar.png" class="smallImgUser">
+                        Usuario
+                    </a>
+                    <div>
+                        <a href="/pages/subPages/newQuestion.html" class="w3-bar-item w3-button" id="sidebarUser">
+                            New Question
+                        </a>
+                        <a href="/pages/subPages/newModel.html" class="w3-bar-item w3-button" id="sidebarUser" >
+                            New Model
+                        </a>
+                    </div>
+                </div>
+                <p class="w3-bar-item sidebarTitle">Favorite</p>
+                <div>
+                    <a href="/pages/user.html" class="w3-bar-item w3-button" id="sidebarUser">
+                        <img src="/images/img_avatar.png" class="sidebarUserImg">
+                        Gabriel
+                    </a>
+                    <a href="/pages/user.html" class="w3-bar-item w3-button" id="sidebarUser" >
+                        <img src="/images/img_avatar.png" class="sidebarUserImg">
+                        Mariano
+                    </a>
+                    <a href="/pages/user.html" class="w3-bar-item w3-button" id="sidebarUser">
+                        <img src="/images/img_avatar.png" class="sidebarUserImg">
+                        Ben Dover
+                    </a>
+                </div>
+                <div class="adDiv">
+                    <div class="ad">
+                        <div>ads</div>
+                    </div>
+                </div>
+                <div class="sidebar secondSidebar">
+                    <a href="/pages/subPages/help.html" class="w3-bar-item w3-button" id="sidebarItem">Help</a>
+                    <a href="/pages/subPages/contact.html" class="w3-bar-item w3-button" id="sidebarItem">Contact</a>
+                </div>
+
+            </div>
+
+            <!--Body-->
+            <div class="body">
+                <div class="subBody">
+                    <div class=" divUserCard">
+                        <div class="divBanner" style="background-image: url('/images/accountBackground.jpg');">
+                            
+                            <img src="/images/img_avatar.png" class="userImage">
+                        </div>
+                        <div class="settingsUserDiv">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <a id="accountButton" class="fa fa-gear" href="carbungle.html"></a>
+                            <a id="accountButton" class="fa fa-pencil" href="carbungle.html"></a>
+                        </div>
+                        
+                        <div class="userDivFull">
+                            
+                            <div class="userDiv">
+                                <div style="display: flex;">
+                                    <div class="userName">Usuario</div>
+                                    <a id="accountButton" href="#">Log Out</a>
+                                </div>
+                                <div style="display: flex;">
+                                    <div class="following">Following: <div class="numbers">100</div></div>
+                                    <div class="followers">Followers: <div class="numbers">20</div></div>
+                                </div>
+                                <div class="userInfo">
+                                    <div>Joined: <div class="numbers">26/01/2023</div></div>
+                                    <div>Birthday: <div class="numbers">26/01/2023</div></div>
+                                    <div>España, Comunidad Valenciana</div>
+                                </div>
+                                <div class="userInfo2">
+                                    <div style="display: flex;">Joined: <div class="numbers">26/01/2023</div></div>
+                                    <div style="display: flex;">Birthday: <div class="numbers">26/01/2023</div></div>
+                                    <div>España, Comunidad Valenciana</div>
+                                </div>
+                                <div class="descripcion">Designer and a fan of trains. Open comissions. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+
+                            <!--Elements-->
+                            <div class="element">
+                                <div class="subElement">
+                                    <div >
+                                        <div class="selfCard" onclick="location.href='subPages/question.html';">
+                                            <div class="divSelfCard">
+                                                <div class="divTitle">
+                                                    <div class="text textTitle">I have a problem with this design</div>
+                                                    <a id="iconBody" class="fa fa-ellipsis-h" href="crombulus.html"></a>
+                                                </div>
+                                                <div  style="display: flex;">
+                                                    <div class="divSmallImage">
+                                                        <div class="divImgModel smallImage">
+                                                            <img src="../static/images/sci_fi_trash.png" onerror="this.onerror=null;this.src='../images/no-image.png';" class="imgModel"/>
+                                                        </div>
+                                                        <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
+                                                        </div>
+                                                        <div class="divIconBody">
+                                                            <a id="iconBody" class="fa fa-bookmark" href="crombulus.html"></a>
+                                                            <a id="iconBody" class="fa fa-share" href="crombulus.html"></a>
+                                                            <a id="iconBody" class="fa fa-heart" href="crombulus.html"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="divImgModel bigImage">
+                                                        <img src="../static/images/sci_fi_trash.png" onerror="this.onerror=null;this.src='../images/no-image.png';" class="imgModel"/>
+                                                    </div>
+                                                </div>
+                                                <div class="bottomCard">
+                                                    <div style="display: flex;">Published in: <div class="numbers">26/01/2023</div></div>
+                                                    <a href="crombulus.html" class="creator">By: Usuario</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="selfCard ">
+                                            <div class="divModelCard">
+                                                <div  style="display: flex;">
+                                                    <div class="divModel">
+                                                        <div class="modelColor">
+                                                            <model-viewer id="modelo3" class="model" onclick="document.querySelector('#modelo3').dismissPoster()" alt="" reveal="manual" src="/models/panda.glb" poster="/images/panda.png" shadow-intensity="1" camera-controls touch-action="pan-y" generate-schema></model-viewer>                
+                                                        </div>
+                                                        <a id="iconBodyModel" class="fa fa-ellipsis-h topRightIcon" href="crombulus.html"></a>
+                                                        <div class="divIconBody modelIcons">
+                                                            <a id="iconBodyModel" class="fa fa-bookmark" href="crombulus.html"></a>
+                                                            <a id="iconBodyModel" class="fa fa-share" href="crombulus.html"></a>
+                                                            <a id="iconBodyModel" class="fa fa-heart" href="crombulus.html"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div onclick="location.href='subPages/model.html';" class="divText">
+                                                    <div>
+                                                        <div class="text textTitle">Sick panda</div>
+                                                    </div>
+                                                    <div class="bottomCard">
+                                                        <div style="display: flex;">Published in: <div class="numbers">26/01/2023</div></div>
+                                                        <a href="crombulus.html" class="creator">By: Usuario</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                     
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

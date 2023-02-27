@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Title of the document</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Esto es del bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--Toolbar lateral-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Iconos-->
+        <script src="scripts/model3d.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <!--CSS Propios-->
+        <link rel="stylesheet" href="../propiaWeb/css/layout.css">
+        <link rel="stylesheet" href="../propiaWeb/css/index.css">
+        <link rel="stylesheet" href="../propiaWeb/css/model.css">
+        <link rel="stylesheet" href="../propiaWeb/css/contact.css">
+        <!--<link rel="stylesheet" href="crt1.css">-->
+
+    </head>
+    <body style="background-color: #252525;"><!--Etiqueta crt  class="crt"-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <header>
+            <div><img class="logo" src="/images/stuckstruder.png" /></div>
+            <div class="headDiv" >
+                <ul class="largeMenu">
+                    <li><a href="/pages/home.html">home</a></li>
+                    <li><a href="/pages/following.html">following</a></li>
+                    <li><a href="/pages/questions.html">questions</a></li>
+                    <li><a href="/pages/models.html">models</a></li>
+                    <li><a href="/pages/liked.html">liked</a></li>
+                    <li><a href="/pages/saved.html">saved</a></li>
+                </ul>
+                <div class="smallMenu">
+                    <button class="fa fa-bars icon smallButton" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>New Model</span>
+                    </button>
+                    <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton1">
+                        <li><a href="/pages/home.html">home</a></li>
+                        <li><a href="/pages/following.html">following</a></li>
+                        <li><a href="/pages/questions.html">questions</a></li>
+                        <li><a href="/pages/models.html">models</a></li>
+                        <li><a href="/pages/liked.html">liked</a></li>
+                        <li><a href="/pages/saved.html">saved</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bigUser">
+            <div class="divIcons">
+                <button class="fa fa-plus icon plusButton" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton2">
+                    <li><a id="createNew" class="dropdown-item" href="/pages/subPages/newQuestion.html">New Question</a></li>
+                    <li><a id="createNew" class="dropdown-item" href="/pages/subPages/newModel.html">New Model</a></li>
+                </ul>
+            </div>
+            <a class="signOut" href="#">Log Out</a>
+            <a class="divUser" href="/pages/account.html">
+                <div class="user">
+                    <div class="divUserName">Usuario</div>
+                    <div class="divUserImg">
+                        <img src="/images/img_avatar.png" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+            </a>
+        </div>
+        </header>
+
+        <div class="beforeSideBar">
+            <div class="w3-sidebar w3-bar-block  sidebar firstSidebar">
+                <div class="smallUser">
+                    <a class="w3-bar-item w3-button sidebarTitle" href="/pages/account.html">
+                        <img src="/images/img_avatar.png" class="smallImgUser">
+                        Usuario
+                    </a>
+                    <div>
+                        <a href="/pages/subPages/newQuestion.html" class="w3-bar-item w3-button" id="sidebarUser">
+                            New Question
+                        </a>
+                        <a href="/pages/subPages/newModel.html" class="w3-bar-item w3-button" id="sidebarUser" >
+                            New Model
+                        </a>
+                    </div>
+                </div>
+                <p class="w3-bar-item sidebarTitle">Favorite</p>
+                <div>
+                    <a href="/pages/user.html" class="w3-bar-item w3-button" id="sidebarUser">
+                        <img src="/images/img_avatar.png" class="sidebarUserImg">
+                        Gabriel
+                    </a>
+                    <a href="/pages/user.html" class="w3-bar-item w3-button" id="sidebarUser" >
+                        <img src="/images/img_avatar.png" class="sidebarUserImg">
+                        Mariano
+                    </a>
+                    <a href="/pages/user.html" class="w3-bar-item w3-button" id="sidebarUser">
+                        <img src="/images/img_avatar.png" class="sidebarUserImg">
+                        Ben Dover
+                    </a>
+                </div>
+                <div class="adDiv">
+                    <div class="ad">
+                        <div>ads</div>
+                    </div>
+                </div>
+                <div class="sidebar secondSidebar">
+                    <a href="/pages/subPages/help.html" class="w3-bar-item w3-button" id="sidebarItem">Help</a>
+                    <a href="/pages/subPages/contact.html" class="w3-bar-item w3-button" id="sidebarItem">Contact</a>
+                </div>
+
+            </div>
+
+            <!--Body-->
+            <div class="body">
+                <div class="container">
+                    <form action="/pages/home.html">
+                  
+                      <label for="title">Title</label>
+                      <input type="text" id="title" name="title" placeholder="Title of your model..">
+                  
+                      
+                        <div style="display: flex; flex-direction: column; margin-lef: 10px;">
+                            <label for="title">Files</label>
+                            <input type="file" id="file" name="file" multiple style="background-color: aliceblue;">
+                  
+                      <div style="margin-top: 10px;">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Cancel"></div>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </body>
+</html>

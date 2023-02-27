@@ -1,0 +1,73 @@
+
+.yarosCaroucel{
+    width: 100vw; height: 90vh; z-index: 1;
+}
+.caroucelImg{
+    width: 100vw; height: 90vh; object-fit: cover;
+}
+.leftAd{
+    background-color: orange; position: fixed; width: 200px; top: 0px; left: 0; bottom: 0px; margin: 20px; margin-top: 200px;
+}
+.rightAd{
+    background-color: orange; position: fixed; width: 200px; top: 0px; right: 0; bottom: 0px; margin: 20px; margin-top: 200px;
+}
+.homeBody{
+    color: #e4d9bf; background-color: #181818;
+}
+.aboutUs{
+    margin-top: 40px; padding-bottom: 100px;
+}
+.homeLogo{
+    margin:auto; height: 200px;
+}
+.aboutTitle{
+    width: fit-content; margin:auto; color: #e4d9bf;  font-size: 40px;
+}
+.aboutText{
+    margin:auto; font-size: 20px; width: fit-content; max-width: 800px;
+}
+.loginTitle{
+    width: fit-content; margin: auto; margin-top: 20px; font-size: 60px;
+}
+.divLoginButton{
+    width: fit-content; margin: auto;
+}
+.loginButton{
+    background-color: #e4d9bf; color: #252525; height: fit-content; padding: 10px; border-radius:10px; font-size: 30px;  font-weight: bold; white-space: nowrap;
+}
+.textBlack{
+    color: #181818;
+}
+
+@media only screen and (max-width: 1430px) {
+    .aboutText{
+        max-width: 600px;
+    }
+
+    .divSelfCard {
+        width: 350px;
+      }
+      .divModelCard{
+        margin: 0; width: 350px;
+      }
+      .model{
+        width:350px; height: 300px;
+      }
+      .divImgModel{
+        margin: auto;
+      }
+      .bigImage{
+        display: none;
+      }
+      .smallImage{
+        display: block;
+      }
+}
+@media only screen and (max-width: 1050px) {
+    .leftAd{
+        display: none;
+    }
+    .rightAd{
+        display: none;
+    }
+}

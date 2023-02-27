@@ -1,0 +1,180 @@
+/*@font-face {
+  font-family: spartan;
+  src: url(/other/spartan.ttf);
+}
+@font-face {
+  font-family: fastHand;
+  src: url(/other/fastHand.ttf);
+}*/
+
+li{
+    list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font-family: spartan;
+  background-color: #252525;
+}
+
+
+.selfCard {
+  width: fit-content;
+    margin: auto;
+    background-color: #151515;
+    color: #e4d9bf;
+    transition: 0.3s;
+    border-color: #252525;
+    border-left: 10px;
+  }
+  
+  .selfCard:hover {
+    box-shadow: 0 0vh 5vh 0 #fa5353;
+    
+  }
+  .selfCard:hover .text{
+    color: #fa5353;
+    
+  }
+  
+  .container {
+    padding: 2px 20vh;
+  }
+a:hover {
+  color: #151515;
+  background-color: #fa5353;
+
+}
+
+.user:hover{
+  background-color: #fa5353;
+  color: #e4d9bf;
+}
+.iconBody{
+  margin-right:10px; font-size: 30px; margin-top:10px; 
+}
+.iconBody:hover{
+  
+  background-color: #151515;
+  color: #fa5353;
+}
+
+.body{
+  margin-left: 300px; width:inherit; position: relative;
+}
+.divSelfCard{
+  margin: 10px; width: 720px;
+}
+.divModelCard{
+  margin: 10px; width: 720px;
+}
+.model{
+  width:720px; height: 400px;
+}
+.modelColor{
+  background-color: white;
+}
+.divTitle{
+  display: flex; justify-content: space-between;
+}
+
+.divIconBody{
+  display: flex;  bottom: 0; margin-top: auto; padding-top: 20px;
+}
+.topRightIcon{
+  position: absolute; right: 0;
+}
+.modelIcons{
+  position: absolute; margin: 10px;
+}
+.divModel{
+  display: flex; flex-direction: column; position: relative;
+}
+.divText{
+  margin: 10px;
+}
+.textTitle{
+  font-size: 30px;
+}
+.divSelfModel{
+  display: flex; flex-direction: column; position: relative;
+}
+.selfModelModel{
+  width: 500px; margin: 0;
+}
+.modelModel{
+  width:500px; height: 300px;
+}
+.divImgModel{
+  width:200px; height: 200px; align-self: end;
+}
+.imgModel{
+  width:200px; height: 200px;
+}
+.bottomCard{
+  display: flex; justify-content: space-between;
+}
+
+.creator:hover{
+  color: #fa5353;
+  background-color: inherit;
+}
+.divSmallImage{
+  display: flex; flex-direction: column;
+}
+
+.smallImage{
+  margin: auto;
+  display: none;
+}
+.numbers{
+  margin-left: 5px;
+  font-family:fastHand;
+}
+
+@media only screen and (max-width: 1060px) {
+  .divSelfCard {
+    width: 480px;
+  }
+  .divModelCard{
+    margin: 0; width: 500px;
+  }
+  .model{
+    width:500px; height: 300px;
+  }
+  .divImgModel{
+    margin: auto;
+  }
+  .bigImage{
+    display: none;
+  }
+  .smallImage{
+    display: block;
+  }
+
+  h3.text{
+    font-size: 35px;
+  }
+  div.text{
+    font-size: 25px;
+  }
+  .iconBody{
+    font-size: 50px;
+  }
+  div.bottomCard{
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .divSelfCard {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .body{
+    margin-left: 200px;
+  }
+}

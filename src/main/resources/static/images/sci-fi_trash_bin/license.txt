@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci-Fi Trash Bin [DispOS Systems]
+* source:	https://sketchfab.com/3d-models/sci-fi-trash-bin-dispos-systems-53803d916c814319927966d53fedfceb
+* author:	Oliver Triplett (https://sketchfab.com/OliverTriplett)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci-Fi Trash Bin [DispOS Systems]" (https://sketchfab.com/3d-models/sci-fi-trash-bin-dispos-systems-53803d916c814319927966d53fedfceb) by Oliver Triplett (https://sketchfab.com/OliverTriplett) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

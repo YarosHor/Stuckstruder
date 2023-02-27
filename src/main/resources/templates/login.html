@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <form id="loginform" th:action="@{/login}" method="POST" role="form" >
+            <h1>Login</h1>
+            <input type="text" name="nombre" id="nombre" placeholder="Email">
+            <br>
+            <input type="password" name="contraseña" id="contraseña" placeholder="Password">
+            <hr>
+            <button type="submit">Continue</button>
+            <small class="text-muted"><a href="/auth/register">Register here!</a></small>
+        </form>
+    </main>
+</body>
+</html>
