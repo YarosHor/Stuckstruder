@@ -39,12 +39,12 @@ public class SecurityConfig {
         //System.out.println(http.getObject());
         http
                 .authorizeHttpRequests()
-                /*.requestMatchers("/questions").permitAll()
-                .anyRequest().authenticated()*/
-                .anyRequest().permitAll()
+                .requestMatchers( "/", "/register", "/process_register", "/styles/**", "/images/**").permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .usernameParameter("nombre")
+                .passwordParameter("contraseña")
                 .loginPage("/login")
                 .defaultSuccessUrl("/questions")
                 .permitAll()

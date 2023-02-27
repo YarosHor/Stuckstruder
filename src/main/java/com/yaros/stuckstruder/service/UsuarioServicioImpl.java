@@ -28,10 +28,10 @@ public class UsuarioServicioImpl implements UsuarioServicio{
         return repositorio.findById(id).get();
     }
 
-    /*@Override
+    @Override
     public long obtenerIdUsuarioPorNombre(String nombre) {
         return repositorio.findByNombre(nombre).getId();
-    }*/
+    }
 
     @Override
     public UsuarioEntity actualizarUsuarios(UsuarioEntity usuario) {

@@ -57,7 +57,7 @@
             <a class="signOut" href="#">Log Out</a>
             <a class="divUser" href="/pages/account.html">
                 <div class="user">
-                    <div class="divUserName">Usuario</div>
+                    <div class="divUserName" th:text="${usuario.getNombre}" >Usuario</div>
                     <div class="divUserImg">
                         <img src="/images/img_avatar.png" style="width: 100%; height: 100%;">
                     </div>
@@ -111,59 +111,6 @@
 
             <!--Body-->
             <div class="body">
-                <div class="selfCard" onclick="location.href='subPages/question.html';">
-                    <div class="divSelfCard">
-                        <div class="divTitle">
-                            <div class="text textTitle">I have a problem with this design</div>
-                            <a class="fa fa-ellipsis-h iconBody" href="crombulus.html"></a>
-                        </div>
-                        <div  style="display: flex;">
-                            <div class="divSmallImage">
-                                <div class="divImgModel smallImage">
-                                    <img  src="../images/sci_fi_trash.png" onerror="this.onerror=null;this.src='../images/no-image.png';" class="imgModel"/>
-                                </div>
-                                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.
-                                </div>
-                                <div class="divIconBody">
-                                    <a  class="fa fa-bookmark iconBody" href="crombulus.html"></a>
-                                    <a  class="fa fa-share iconBody" href="crombulus.html"></a>
-                                    <a  class="fa fa-heart iconBody" href="crombulus.html"></a>
-                                </div>
-                            </div>
-                            <div class="divImgModel bigImage">
-                                <img  src="../images/sci_fi_trash.png" onerror="this.onerror=null;this.src='../images/no-image.png';" class="imgModel"/>
-                            </div>
-                        </div>
-                        <div class="bottomCard">
-                            <div style="display: flex;">Published in: <div class="numbers">26/01/2023</div></div>
-                            <a href="crombulus.html" class="creator">By: Jesus12</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="selfCard" onclick="location.href='subPages/question.html';">
-                    <div class="divSelfCard">
-                        <div class="divTitle">
-                            <div class="text textTitle">I have a problem with this design</div>
-                            <a class="fa fa-ellipsis-h iconBody" href="crombulus.html"></a>
-                        </div>
-                        <div  style="display: flex;">
-                            <div class="divSmallImage">
-                                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum totam possimus vero natus, commodi cupiditate dicta magnam, adipisci laboriosam minus nisi ad! Itaque quasi accusantium fugit. Voluptatibus dolores adipisci laboriosam.  Voluptatibus dolores adipisci laboriosam.
-                                </div>
-                                <div class="divIconBody">
-                                    <a  class="fa fa-bookmark iconBody" href="crombulus.html"></a>
-                                    <a  class="fa fa-share iconBody" href="crombulus.html"></a>
-                                    <a  class="fa fa-heart iconBody" href="crombulus.html"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bottomCard">
-                            <div style="display: flex;">Published in: <div class="numbers">26/01/2023</div></div>
-                            <a href="crombulus.html" class="creator">By: Jesus12</a>
-                        </div>
-                    </div>
-                </div>
                 <div th:each="publicacion : ${publicaciones}">
                     <div th:if="${publicacion.getIsQuestion() == 1}">
                         <div class="selfCard" onclick="location.href='subPages/question.html';">
@@ -190,7 +137,8 @@
                                 </div>
                                 <div class="bottomCard">
                                     <div style="display: flex;">Published in: <div class="numbers" th:text="${publicacion.getFkPregunta()?.getFechaCreacion()}">Fecha</div></div>
-                                    <!--<a href="crombulus.html" class="creator" >By: <div th:text="${publicacion.getFkUsuario()?.getNombre()}">Nombre</div></a>-->
+                                    <a href="crombulus.html" class="creator" >By: <div th:text="${publicacion.getFkUsuario()?.getNombre()}">Nombre</div></a>
+
                                 </div>
                             </div>
                         </div>

@@ -20,12 +20,12 @@ public class PublicacionControlador {
     @GetMapping({ "/questions", /*"/" */})
     public String listarEstudiantes(Model modelo) {
         modelo.addAttribute("publicaciones", publicacionServicio.listarTodosLasPublicaciones());
-        /*UserDetailsImpl user = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        UserDetailsImpl user = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         System.out.println(user.getUsername());
         long id = usuarioServicio.obtenerIdUsuarioPorNombre(user.getUsername());
         System.out.println(id);
         System.out.println(usuarioServicio.obtenerUsuarioPorId(id));
-        modelo.addAttribute("usuario", usuarioServicio.obtenerUsuarioPorId(id));*/
+        modelo.addAttribute("usuario", usuarioServicio.obtenerUsuarioPorId(id));
         return "questions"; // nos retorna al archivo estudiantes
     }
     /*@GetMapping({ "/questions", "/" })

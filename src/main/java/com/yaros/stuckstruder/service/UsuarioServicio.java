@@ -11,7 +11,7 @@ public interface UsuarioServicio {
 
     public UsuarioEntity obtenerUsuarioPorId(Long id);
 
-    //public long obtenerIdUsuarioPorNombre(String nombre);
+    public long obtenerIdUsuarioPorNombre(String nombre);
 
     public UsuarioEntity actualizarUsuarios(UsuarioEntity usuario);
 
