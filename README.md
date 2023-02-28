@@ -14,4 +14,4 @@ Este proyecto no esta acabado las unicas paginas que funcionan son las necesaria
 
 ##Diagrama Entidad Relacion
 https://github.com/YarosHor/Stuckstruder/blob/master/StuckstruEntidadRelacion.png
-![Running app](StuckstruderEntidadRelacion.png)
+![alt text]([http://url/to/img.png](https://github.com/YarosHor/Stuckstruder/blob/master/StuckstruEntidadRelacion.png))
