@@ -12,5 +12,5 @@ Para hacer que funcione hay que seguir los siguientes pasos:
 ## Datos a tener en cuenta
 Este proyecto no esta acabado las unicas paginas que funcionan son las necesarias para demostrar su funcionamiento.
 
-##
+##Diagrama Entidad Relacion
 ![Running app](StuckstruderEntidadRelacion.png)
