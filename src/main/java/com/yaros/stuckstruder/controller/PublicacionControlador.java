@@ -1,11 +1,14 @@
 package com.yaros.stuckstruder.controller;
 
+import com.lowagie.text.DocumentException;
 import com.yaros.stuckstruder.model.PreguntaEntity;
 import com.yaros.stuckstruder.model.PublicacionEntity;
 import com.yaros.stuckstruder.service.PreguntaServicio;
 import com.yaros.stuckstruder.service.PublicacionServicio;
 import com.yaros.stuckstruder.service.UserDetailsImpl;
 import com.yaros.stuckstruder.service.UsuarioServicio;
+import com.yaros.stuckstruder.util.PdfGeneratorJava;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -14,6 +17,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 @Controller
 public class PublicacionControlador {
@@ -92,4 +101,20 @@ public class PublicacionControlador {
         publicacionServicio.eliminarPublicacion(id);
         return "redirect:/questions";
     }
+
+    @GetMapping("/export-to-pdf")
+    public void generatePdfFile(HttpServletResponse response) throws DocumentException, IOException
+    {
+        response.setContentType("application/pdf");
+        DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD:HH:MM:SS");
+        String currentDateTime = dateFormat.format(new Date());
+        String headerkey = "Content-Disposition";
+        String headervalue = "attachment; filename=publicaciones" + currentDateTime + ".pdf";
+        response.setHeader(headerkey, headervalue);
+        List< PublicacionEntity > publicacionEntityList = publicacionServicio.listarTodosLasPublicaciones();
+        PdfGeneratorJava generator = new PdfGeneratorJava();
+        generator.generate(publicacionEntityList, response);
+    }
+
+
 }
