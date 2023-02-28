@@ -19,7 +19,7 @@ public class PreguntaEntity {
     private String descripcion;
     @Basic
     @Column(name = "fecha_creacion", nullable = true)
-    private Date fechaCreacion;
+    private Date fechaCreacion = new Date(2023,10,6);
 
     @OneToOne(mappedBy = "fkPregunta")
     private PublicacionEntity publicacion;

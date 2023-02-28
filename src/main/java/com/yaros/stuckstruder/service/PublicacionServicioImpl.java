@@ -35,6 +35,7 @@ public class PublicacionServicioImpl implements PublicacionServicio{
 
     @Override
     public void eliminarPublicacion(Long id) {
+        System.out.println("IntentoEliminacion " + id);
         repositorio.deleteById(id);
     }
 }

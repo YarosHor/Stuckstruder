@@ -37,9 +37,6 @@ public class PublicacionEntity {
     }
 
     public UsuarioEntity getFkUsuario() {
-        UserDetailsImpl user = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-        System.out.println("hallo   " + user.getUsername());
         return fkUsuario;
     }
 
