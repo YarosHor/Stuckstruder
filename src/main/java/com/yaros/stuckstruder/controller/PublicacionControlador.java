@@ -70,17 +70,17 @@ public class PublicacionControlador {
         return "editQuestion";
     }
 
-    @PostMapping("/estudiantes/{id}")
-    public String actualizarEstudiante(@PathVariable Long id, @ModelAttribute("publicacion") PublicacionEntity publicacion, Model modelo) {
-        PublicacionEntity publicacionExistente = publicacionServicio.obtenerPublicacionPorId(id);
-        publicacionExistente.setId(Math.toIntExact(id));
-        publicacionExistente.getFkPregunta().setId(publicacion.getFkPregunta().getId());
-        publicacionExistente.getFkPregunta().setNombre(publicacion.getFkPregunta().getNombre());
-        publicacionExistente.getFkPregunta().setDescripcion(publicacion.getFkPregunta().getDescripcion());
-        publicacionExistente.getFkPregunta().setFechaCreacion(publicacion.getFkPregunta().getFechaCreacion());
+    @PostMapping("/questions/{id}")
+    public String actualizarEstudiante(@PathVariable Long id, @ModelAttribute("pregunta") PreguntaEntity pregunta, Model modelo) {
+        // preguntaEntity = preguntaServicio.obtenerPreguntaPorId(id).getPublicacion();
+        PublicacionEntity publicacionExistente = preguntaServicio.obtenerPreguntaPorId(id).getPublicacion();
+        publicacionExistente.getFkPregunta().setId(Math.toIntExact(id));
+        publicacionExistente.getFkPregunta().setNombre(pregunta.getNombre());
+        publicacionExistente.getFkPregunta().setDescripcion(pregunta.getDescripcion());
+        publicacionExistente.getFkPregunta().setFechaCreacion(pregunta.getFechaCreacion());
 
         publicacionServicio.actualizarPublicacion(publicacionExistente);
-        return "redirect:/estudiantes";
+        return "redirect:/questions";
     }
 
     @GetMapping("/questions/{id}")

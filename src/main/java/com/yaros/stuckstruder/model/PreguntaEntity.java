@@ -56,6 +56,14 @@ public class PreguntaEntity {
         this.fechaCreacion = fechaCreacion;
     }
 
+    public PublicacionEntity getPublicacion() {
+        return publicacion;
+    }
+
+    public void setPublicacion(PublicacionEntity publicacion) {
+        this.publicacion = publicacion;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
