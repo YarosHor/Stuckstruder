@@ -50,7 +50,24 @@ public class SecurityConfig {
                 .permitAll()
                 .and()
                 .logout().logoutSuccessUrl("/").permitAll();
+        http
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/index")
+                        .invalidateHttpSession(true)
+                );
 
         return http.build();
     }
+
+   /*@Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/index")
+                        .invalidateHttpSession(true)
+                );
+        return http.build();
+    }*/
 }

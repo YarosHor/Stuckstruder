@@ -23,8 +23,8 @@
             <div><img class="logo" src="/images/stuckstruder.png" /></div>
             <div class="headDiv" >
                 <ul class="largeMenu">
-                    <li><a href="/pages/home.html">home</a></li>
-                    <li><a href="/pages/following.html" class="selected">following</a></li>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/pages/following.html">following</a></li>
                     <li><a href="/pages/questions.html">questions</a></li>
                     <li><a href="/pages/models.html">models</a></li>
                     <li><a href="/pages/liked.html">liked</a></li>
@@ -35,8 +35,8 @@
                         <span>Login</span>
                     </button>
                     <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton1">
-                        <li><a href="/pages/home.html">home</a></li>
-                        <li><a href="/pages/following.html" class="selected">following</a></li>
+                        <li><a href="/">home</a></li>
+                        <li><a href="/pages/following.html">following</a></li>
                         <li><a href="/pages/questions.html">questions</a></li>
                         <li><a href="/pages/models.html">models</a></li>
                         <li><a href="/pages/liked.html">liked</a></li>
@@ -46,14 +46,12 @@
             </div>
             <div class="bigUser">
             <div class="divIcons">
-                <button class="fa fa-plus icon plusButton" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                  </button>
-                <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton2">
-                    <li><a  class="dropdown-item createNew" href="/pages/subPages/newQuestion.html">New Question</a></li>
-                    <li><a  class="dropdown-item createNew" href="/pages/subPages/newModel.html">New Model</a></li>
-                </ul>
+                <a class="fa fa-plus icon plusButton" type="button" href="/questions/nuevo">
+                </a>
             </div>
-            <a class="signOut" href="#">Log Out</a>
+                <form th:action="@{/logout}" method="post" th:hidden="true" name="logoutForm">
+                    <input type="submit" value="Logout" />
+                </form>
             <a class="divUser" href="/pages/account.html">
                 <div class="user">
                     <div class="divUserName">Usuario</div>

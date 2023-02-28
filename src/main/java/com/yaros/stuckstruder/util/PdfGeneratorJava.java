@@ -58,20 +58,19 @@ public class PdfGeneratorJava {
         cell.setPhrase(new Phrase("Autor", font));
         table.addCell(cell);
         for (PublicacionEntity publicacion: publicacionEntityList) {
+            table.addCell(String.valueOf(publicacion.getId()));
             if(publicacion.getFkPregunta() == null){
-                table.addCell("");
                 table.addCell("");
                 table.addCell("");
             }
             else{
-                table.addCell(String.valueOf(publicacion.getId()));
                 table.addCell(publicacion.getFkPregunta().getNombre());
                 table.addCell(publicacion.getFkPregunta().getDescripcion());
             }
-            if(publicacion.getFkModelo() == null){
+            if(publicacion.getFkUsuario() == null){
                 table.addCell("");
             }else{
-                table.addCell(publicacion.getFkModelo().getNombre());
+                table.addCell(publicacion.getFkUsuario().getNombre());
             }
         }
         // Adding the created table to the document

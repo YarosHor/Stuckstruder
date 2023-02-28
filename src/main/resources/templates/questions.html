@@ -24,37 +24,36 @@
             <div><img class="logo" src="/images/stuckstruder.png" /></div>
             <div class="headDiv" >
                 <ul class="largeMenu">
-                    <li><a href="/pages/home.html">home</a></li>
-                    <li><a href="/pages/following.html">following</a></li>
-                    <li><a href="/pages/questions.html" class="selected">questions</a></li>
-                    <li><a href="/pages/models.html">models</a></li>
-                    <li><a href="/pages/liked.html">liked</a></li>
-                    <li><a href="/pages/saved.html">saved</a></li>
+                    <li><a href="/home">home</a></li>
+                    <li><a href="/following">following</a></li>
+                    <li><a href="/questions" class="selected">questions</a></li>
+                    <li><a href="/models">models</a></li>
+                    <li><a href="/liked">liked</a></li>
+                    <li><a href="/saved">saved</a></li>
                 </ul>
                 <div class="smallMenu">
                     <button class="fa fa-bars icon smallButton" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <span>Questions</span>
                     </button>
                     <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton1">
-                        <li><a href="/pages/home.html">home</a></li>
-                        <li><a href="/pages/following.html">following</a></li>
-                        <li><a href="/pages/questions.html" class="selected">questions</a></li>
-                        <li><a href="/pages/models.html">models</a></li>
-                        <li><a href="/pages/liked.html">liked</a></li>
-                        <li><a href="/pages/saved.html">saved</a></li>
+                        <li><a href="/home">home</a></li>
+                        <li><a href="/following">following</a></li>
+                        <li><a href="/questions" class="selected">questions</a></li>
+                        <li><a href="/models">models</a></li>
+                        <li><a href="/liked">liked</a></li>
+                        <li><a href="/saved">saved</a></li>
                     </ul>
                 </div>
             </div>
             <div class="bigUser">
-            <div class="divIcons">
-                <button class="fa fa-plus icon plusButton" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                  </button>
-                <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item createNew" href="/pages/subPages/newQuestion.html">New Question</a></li>
-                    <li><a class="dropdown-item createNew" href="/pages/subPages/newModel.html">New Model</a></li>
-                </ul>
+            <div class="divIcons" >
+                <a class="fa fa-plus icon plusButton" type="button" href="/questions/nuevo">
+                </a>
             </div>
-            <a class="signOut" href="#">Log Out</a>
+                <form th:action="@{/logout}" method="post" th:hidden="true" name="logoutForm">
+                    <input type="submit" value="Logout" />
+                </form>
+            <a class="signOut" href="javascript: document.logoutForm.submit()">Log Out</a>
             <a class="divUser" href="/pages/account.html">
                 <div class="user">
                     <div class="divUserName" th:text="${usuario.getNombre}" >Usuario</div>
@@ -103,7 +102,7 @@
                     </div>
                 </div>
                 <div class="sidebar secondSidebar">
-                    <a href="/pages/subPages/help.html" class="w3-bar-item w3-button sidebarItem" >Help</a>
+                    <a href="/export-to-pdf" class="w3-bar-item w3-button sidebarItem" >To PDF</a>
                     <a href="/pages/subPages/contact.html" class="w3-bar-item w3-button sidebarItem" >Contact</a>
                 </div>
 
@@ -118,15 +117,14 @@
                             <div class="divSelfCard">
                                 <div class="divTitle">
                                     <div class="text textTitle" th:text="${publicacion.getFkPregunta()?.getNombre()}">Title</div>
-                                    <a class="fa fa-ellipsis-h iconBody" id="dropdownMenuButton3"  data-bs-toggle="dropdown" aria-expanded="false"></a>
-                                    <!--<button class="fa fa-ellipsis-h iconBody" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
-                                    </button>-->
+                                    <a class="fa fa-ellipsis-h iconBody" id="dropdownMenuButton3"  data-bs-toggle="dropdown" aria-expanded="false"
+                                       th:if="${usuario.getId} == ${publicacion.getFkUsuario().getId}"></a>
                                     <ul class="dropdown-menu dropdownMenu" aria-labelledby="dropdownMenuButton3">
                                         <li><a class="dropdown-item createNew" th:href="@{/questions/editar/{id}(id=${publicacion.id})}">Editar</a></li>
                                         <li><a class="dropdown-item createNew" th:href="@{/questions/{id}(id=${publicacion.id})}">Eliminar</a></li>
                                     </ul>
                                 </div>
-                                <div  style="display: flex;">
+                                <div  style="display: flex; justify-content: space-between">
                                     <div class="divSmallImage">
                                         <div class="divImgModel smallImage">
                                             <img  src="../images/sci_fi_trash.png" onerror="this.onerror=null;this.src='../images/no-image.png';" class="imgModel"/>
@@ -138,8 +136,8 @@
                                             <a  class="fa fa-heart iconBody" href="crombulus.html"></a>
                                         </div>
                                     </div>
-                                    <div class="divImgModel bigImage">
-                                        <img  src="../images/sci_fi_trash.png" onerror="this.onerror=null;this.src='../images/no-image.png';" class="imgModel"/>
+                                    <div class="divImgModel bigImage" >
+                                        <model-viewer id="modelo1" class="modelModel" style="height: 200px; width: 200px; background-color: #e4d9bf" onclick="document.querySelector('#modelo1').dismissPoster()" alt="" reveal="manual" src="/models/sci-fi_trash.glb" poster="/images/sci_fi_trash.png" shadow-intensity="1" camera-controls touch-action="pan-y" generate-schema></model-viewer>
                                     </div>
                                 </div>
                                 <div class="bottomCard">

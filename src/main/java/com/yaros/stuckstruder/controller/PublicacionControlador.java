@@ -52,6 +52,9 @@ public class PublicacionControlador {
         PublicacionEntity publicacion = new PublicacionEntity();
         PreguntaEntity pregunta = new PreguntaEntity();
         modelo.addAttribute("pregunta", pregunta);
+        UserDetailsImpl user = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        long id = usuarioServicio.obtenerIdUsuarioPorNombre(user.getUsername());
+        modelo.addAttribute("usuario", usuarioServicio.obtenerUsuarioPorId(id));
         return "newQuestion";//nombre archivo FS
     }
 
@@ -76,6 +79,9 @@ public class PublicacionControlador {
     public String mostrarFormularioDeEditar(@PathVariable Long id, Model modelo) {
         Long preguntaId = Long.valueOf(publicacionServicio.obtenerPublicacionPorId(id).getFkPregunta().getId());
         modelo.addAttribute("pregunta", preguntaServicio.obtenerPreguntaPorId(preguntaId));
+        UserDetailsImpl user = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        long idUser = usuarioServicio.obtenerIdUsuarioPorNombre(user.getUsername());
+        modelo.addAttribute("usuario", usuarioServicio.obtenerUsuarioPorId(idUser));
         return "editQuestion";
     }
 
